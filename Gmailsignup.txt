@@ -1,0 +1,42 @@
+package sachin;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Gmail_signup {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.chrome.driver","D:\\brwsr\\chromedriver.exe");
+	     WebDriver driver=new ChromeDriver();
+	     driver.manage().window().maximize();
+	     driver.get("https://accounts.google.com/signup");  
+		
+	        driver.findElement(By.name("firstName")).sendKeys("atin");       //create first name
+	        
+			driver.findElement(By.name("lastName")).sendKeys("pawar");      // create last name
+			
+			driver.findElement(By.name("Username")).sendKeys("atinpawar13");  //create username
+			
+			driver.findElement(By.name("Passwd")).sendKeys("atin1394");   // create password
+			
+			driver.findElement(By.name("ConfirmPasswd")).sendKeys("atin1394");  //confirm password
+			
+driver.findElement(By.className("VfPpkd-muHVFf-bMcfAe")).sendKeys("show password");  //show password
+			
+driver.findElement(By.xpath("//*[@id=\"accountDetailsNext\"]/div/button")).click(); //click on button
+			
+			
+			driver.findElement(By.xpath("//input[@id='phoneNumberId']")).sendKeys("9764233982");
+			
+   	      driver.findElement(By.className("VfPpkd-vQzf8d")).click();
+			
+			
+			
+	}
+
+}
+        
